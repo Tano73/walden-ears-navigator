@@ -18,7 +18,7 @@ function escapeHtml(s) {
     .replace(/'/g, '&#39;');
 }
 
-const EARS_KW_RE = /(the system SHALL)|\b(WHEN|WHILE|IF|THEN|WHERE|DURING)\b/g;
+const EARS_KW_RE = /([Tt]he system SHALL)|\b(WHEN|WHILE|IF|THEN|WHERE|DURING)\b/g;
 
 function highlightEARS(text) {
   return escapeHtml(text).replace(EARS_KW_RE, '<strong>$&</strong>');

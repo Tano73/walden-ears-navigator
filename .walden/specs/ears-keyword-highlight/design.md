@@ -1,7 +1,7 @@
 ---
 status: approved
-approved_at: 2026-04-27T19:32:10Z
-last_modified: 2026-04-27T19:32:10Z
+approved_at: 2026-04-27T20:10:18Z
+last_modified: 2026-04-27T20:10:18Z
 source_requirements_approved_at: 2026-04-27T19:30:07Z
 ---
 
@@ -34,13 +34,13 @@ app.js
 
 ```js
 const EARS_KW_RE =
-  /(the system SHALL)|\b(WHEN|WHILE|IF|THEN|WHERE|DURING)\b/g;
+  /([Tt]he system SHALL)|\b(WHEN|WHILE|IF|THEN|WHERE|DURING)\b/g;
 ```
 
-- `(the system SHALL)` — frase completa, nessun word-boundary necessario (inizia e termina con lettere/spazio)
+- `([Tt]he system SHALL)` — frase completa; `[Tt]` copre entrambe le varianti: i requisiti ubiquitous EARS iniziano con `The system SHALL` (T maiuscola), mentre la locuzione compare in minuscolo all'interno di frasi event-driven/unwanted. Il flag `i` non è usato perché le keyword trigger (`WHEN`, `WHILE`, ecc.) sono convenzionalmente UPPERCASE e il flag renderebbe il match ambiguo.
 - `\b...\b` — word-boundary su tutti i trigger keyword: impedisce match parziali (es. "WHENEVER" non matcherà "WHEN")
 - Flag `g` — sostituisce tutte le occorrenze nella stringa
-- Case-sensitive: keyword EARS sono sempre uppercase nella notazione standard
+- Case-sensitive per le keyword trigger; case-handled esplicitamente per `the system SHALL` tramite `[Tt]`
 
 ## Options Considered
 
