@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EARS Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>EARS Navigator</h1>
+    <div class="project-selector">
+      <label for="project-select">Progetto:</label>
+      <select id="project-select"></select>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside id="stats">
+      <h2>Statistiche</h2>
+      <div class="stat-block">
+        <span class="stat-label">Totale AC</span>
+        <span class="stat-value" id="stat-total">—</span>
+      </div>
+      <h3>Per tipo EARS</h3>
+      <div class="stat-block">
+        <span class="stat-label stat-badge badge--event">⚡ event-driven</span>
+        <span class="stat-value" id="stat-event">—</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-label stat-badge badge--unwanted">⚠ unwanted</span>
+        <span class="stat-value" id="stat-unwanted">—</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-label stat-badge badge--state">🔄 state-driven</span>
+        <span class="stat-value" id="stat-state">—</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-label stat-badge badge--ubiquitous">✅ ubiquitous</span>
+        <span class="stat-value" id="stat-ubiquitous">—</span>
+      </div>
+      <h3>Per gruppo</h3>
+      <div id="stat-groups"></div>
+    </aside>
+
+    <main>
+      <div id="accordion"></div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <span id="modal-id" class="modal-ac-id"></span>
+        <span id="modal-badge" class="modal-badge"></span>
+        <button id="modal-close" class="modal-close" aria-label="Chiudi">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-text" class="modal-text"></p>
+        <hr>
+        <div class="modal-parent">
+          <span class="modal-parent-label">Requisito padre</span>
+          <span id="modal-parent-id" class="modal-parent-id"></span>
+          <span id="modal-parent-title" class="modal-parent-title"></span>
+          <p id="modal-user-story" class="modal-user-story"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
