@@ -14,7 +14,7 @@ function classifyEARS(text) {
 }
 
 function parseRequirements(filePath) {
-  const raw = fs.readFileSync(filePath, 'utf8');
+  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
   const lines = raw.split('\n');
 
   const groups = [];
