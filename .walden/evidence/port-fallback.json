@@ -1,0 +1,275 @@
+{
+  "schema_version": "v1alpha2",
+  "feature": "port-fallback",
+  "tasks": {
+    "1.1": {
+      "task_fingerprint": "sha256:c5d30237863d0794a0a194029e9ab9b0beaaf9ddb6ac3fd6bea642411cb519fe",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:b3321e0047b96f64be60216ddb8314c30d5a510741d520a33b97e2e33680a781",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "--test",
+            "test/start.test.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:510b6bb0ee99ca23d4c32207c57bf37bf828bfaaa0f0561fde4838b10475beb7"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:53:51Z"
+    },
+    "1.2": {
+      "task_fingerprint": "sha256:a14dbf298946a06587b23a294e4625b376e41fe4036f523163c1e39f8075e6ff",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:b3321e0047b96f64be60216ddb8314c30d5a510741d520a33b97e2e33680a781",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "--test",
+            "test/start.test.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:b886d3156e212f468ea667dabd17e74f355a675335e24e7cd5082a221a113387"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:53:51Z"
+    },
+    "1.3": {
+      "task_fingerprint": "sha256:4e1ce4551464bf5cc9a326326414bf64a9861e68e615b842d981f04cc21f9d14",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:b3321e0047b96f64be60216ddb8314c30d5a510741d520a33b97e2e33680a781",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "--test",
+            "test/start.test.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:05ae275c7cb7bcdb0dac131d8fa8f23b573acb1e161efcaa0e83f416cf7addb9"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:53:51Z"
+    },
+    "2.1": {
+      "task_fingerprint": "sha256:2265f343120d9f748b83ebaf6ce5eba4e0312ee4d17ff4a234a5ac19ebfbd170",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:b3321e0047b96f64be60216ddb8314c30d5a510741d520a33b97e2e33680a781",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "--test",
+            "test/start.test.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:9ad16f764dfd42726d04b66e24bfb1f00ed4681b31ba6535d4d608814dd55177"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:53:51Z"
+    },
+    "2.2": {
+      "task_fingerprint": "sha256:a24575606edf3e8f84170d3e17a6facf41c043f3bbe618dd0a8e8c2e1b31e69d",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:b3321e0047b96f64be60216ddb8314c30d5a510741d520a33b97e2e33680a781",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "--test",
+            "test/start.test.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:fb7e3f4817ae1beccda80b112867dd515f077f8cf5b94bccf44c75d1ec775447"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:53:51Z"
+    },
+    "3.1": {
+      "task_fingerprint": "sha256:7060a38d652749586eb90621a3185834f0d9af4bf79612045eeed669ba1b0dfd",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:ee1bf80b6f006c43ff138269f0a637c3b19ea1571d3c36b9e78c5cb84e26012b",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "sh",
+            "-c",
+            "node --check server.js \u0026\u0026 grep -q \"require('./src/start')\" server.js \u0026\u0026 grep -q \"module.exports = server\" server.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:52:29Z"
+    },
+    "3.2": {
+      "task_fingerprint": "sha256:db6264015a9c5a6d099297a9d05e7349520f0acab68fb7d513c4ccc8f7635e66",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:ee1bf80b6f006c43ff138269f0a637c3b19ea1571d3c36b9e78c5cb84e26012b",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "--test",
+            "test/launcher.test.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:2e6a49112f67210766b151adee3a661553c9d3d4db5f133809ade9fda945d224"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:52:34Z"
+    },
+    "4.1": {
+      "task_fingerprint": "sha256:2b40e9aea366c4e908de66c892a3817fdf1c320a3a30e1a09e550697e091be04",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989"
+      },
+      "requirements_fingerprint": "sha256:5baedeb4706f13b96152a6fddb8108917339ddb1d489a5efe001ac67bc03800d",
+      "design_fingerprint": "sha256:f4625e1b336a9b3c8fb3c4d16ef290ea6fa176456928c0698f99a72d13aed1e6",
+      "tasks_fingerprint": "sha256:b3321e0047b96f64be60216ddb8314c30d5a510741d520a33b97e2e33680a781",
+      "code_identity": "sha256:176faaa0a37b0ae2f3cc6da37c90408810037905346e12cbbef38cb97e1b0989",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "sh",
+            "-c",
+            "grep -q 'porta successiva' README.md \u0026\u0026 node --test test/parser.test.js test/start.test.js test/launcher.test.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:a03bdaf15ac90245734d6e75811f2ce0a86c6a539a0fbcf504ebb917f1312345"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T15:53:33Z"
+    }
+  }
+}

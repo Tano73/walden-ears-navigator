@@ -3,9 +3,9 @@ const express = require('express');
 const path    = require('path');
 const fs      = require('fs');
 const { parseRequirements } = require('./src/parser');
+const { resolveBasePort, start } = require('./src/start');
 
 const app  = express();
-const PORT = process.env.PORT || 3000;
 
 const SPECS_DIR = process.env.WALDEN_SPECS_DIR
   ? path.resolve(process.env.WALDEN_SPECS_DIR)
@@ -58,9 +58,7 @@ app.get('/api/projects/:name/requirements', (req, res) => {
   }
 });
 
-const server = app.listen(PORT, () => {
-  console.log(`EARS Navigator listening on http://localhost:${PORT}`);
-  console.log(`Specs dir: ${SPECS_DIR}`);
-});
+const server = start({ app, basePort: resolveBasePort(process.env) });
+console.log(`Specs dir: ${SPECS_DIR}`);
 
 module.exports = server;

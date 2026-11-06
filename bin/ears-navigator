@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SOURCE="${BASH_SOURCE[0]}"
+while [[ -L "$SOURCE" ]]; do
+  SOURCE_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  if [[ "$SOURCE" != /* ]]; then
+    SOURCE="$SOURCE_DIR/$SOURCE"
+  fi
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+APP_DIR="$(dirname "$SCRIPT_DIR")"
+
+usage() {
+  echo "Usage: $(basename "$0") [PROJECT_PATH]"
+  echo ""
+  echo "  PROJECT_PATH  Path to a Walden project directory (containing .walden/specs)"
+  echo "                or directly to a specs directory."
+  echo "                Defaults to the current directory and its parents."
+  exit 1
+}
+
+find_specs_from() {
+  local dir="$1"
+  while true; do
+    if [[ -d "$dir/.walden/specs" ]]; then
+      printf '%s\n' "$dir/.walden/specs"
+      return 0
+    fi
+    if [[ "$dir" == "/" ]]; then
+      return 1
+    fi
+    dir="$(dirname "$dir")"
+  done
+}
+
+resolve_specs_dir() {
+  local target="${1:-}"
+
+  if [[ -z "$target" ]]; then
+    find_specs_from "$(pwd)"
+    return $?
+  fi
+
+  if [[ ! -d "$target" ]]; then
+    return 2
+  fi
+
+  if ! target="$(cd -P "$target" 2>/dev/null && pwd)"; then
+    return 2
+  fi
+
+  # Case 1: <target>/.walden/specs exists
+  if [[ -d "$target/.walden/specs" ]]; then
+    printf '%s\n' "$target/.walden/specs"
+    return 0
+  fi
+
+  # Case 2: the path itself is the specs directory (contains project subdirs with requirements.md)
+  local found=0
+  while IFS= read -r -d '' subdir; do
+    if [[ -f "$subdir/requirements.md" ]]; then
+      found=1
+      break
+    fi
+  done < <(find "$target" -mindepth 1 -maxdepth 1 -type d -print0 2>/dev/null)
+
+  if [[ $found -eq 1 ]]; then
+    printf '%s\n' "$target"
+    return 0
+  fi
+
+  # Empty specs dir is still valid if the directory exists and looks like specs
+  if [[ "$(basename "$target")" == "specs" ]]; then
+    printf '%s\n' "$target"
+    return 0
+  fi
+
+  return 1
+}
+
+if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
+  usage
+fi
+
+if [[ $# -gt 0 ]]; then
+  TARGET="$1"
+  DISPLAY_TARGET="$1"
+else
+  TARGET=""
+  DISPLAY_TARGET="$(pwd)"
+fi
+
+if SPECS_DIR="$(resolve_specs_dir "$TARGET")"; then
+  :
+else
+  status=$?
+  if [[ $status -eq 2 ]]; then
+    echo "Error: path '${DISPLAY_TARGET}' does not exist or is not a readable directory." >&2
+  else
+    echo "Error: cannot find a Walden specs directory from '${DISPLAY_TARGET}'." >&2
+    echo "Expected '${DISPLAY_TARGET}/.walden/specs', a parent containing '.walden/specs', or a specs directory with project subdirectories." >&2
+  fi
+  exit 1
+fi
+
+echo "EARS Navigator"
+echo "  Specs dir : $SPECS_DIR"
+echo ""
+
+exec env WALDEN_SPECS_DIR="$SPECS_DIR" node "$APP_DIR/server.js"
