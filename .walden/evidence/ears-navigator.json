@@ -1,0 +1,567 @@
+{
+  "schema_version": "v1alpha2",
+  "feature": "ears-navigator",
+  "tasks": {
+    "1.1": {
+      "task_fingerprint": "sha256:29fcd8dbef9053b8823bb44b3061d8e3d6f0aa5b01247025643adce51d7ae8aa",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const p=require('./package.json'); if(!p.dependencies || !p.dependencies.express) process.exit(1); console.log('package ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:24d7162d410e0a2c655390ba008824de1d54f75589798c6094bb5987d40b518e"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "1.2": {
+      "task_fingerprint": "sha256:4f02f87b8deedbee6437542397a2a44b2384fac5bbf70ddebd46a130a0c72640",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "sh",
+            "-c",
+            "test -d src \u0026\u0026 test -d public \u0026\u0026 test -f server.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "1.3": {
+      "task_fingerprint": "sha256:4d86eeef70bcbb8beee9f955c1dddd1d3678cf8f7f7e4d9737791a4326c676d3",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "sh",
+            "-c",
+            "test -d node_modules/express"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "2.1": {
+      "task_fingerprint": "sha256:01e675fd666fbc624acebebb89cb23462c981c26befc63616f366fad8f66e48c",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const p=require('./src/parser'); const r=p.parseRequirements('.walden/specs/port-fallback/requirements.md'); if(!r.groups || !r.groups.length) process.exit(1); console.log('ok',r.groups.length)"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:b37996117a8e081c1a0d3809db89199019ed496cceacae41d9abbf6d8ca8751d"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "2.2": {
+      "task_fingerprint": "sha256:0c8d60eb2a758b39f269fa466fd3ed5d232ea4bed42ff618a5ccec1e1d820894",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const {classifyEARS}=require('./src/parser'); if(classifyEARS('WHEN x SHALL y')!=='event-driven') process.exit(1); if(classifyEARS('IF x THEN SHALL y')!=='unwanted') process.exit(1); if(classifyEARS('WHILE x SHALL y')!=='state-driven') process.exit(1); if(classifyEARS('The system SHALL y')!=='ubiquitous') process.exit(1); console.log('classify ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:6d1b4f5e66caa26d2638f030a69de8c580b7d1f4324418c436a4aec5b0c7fc49"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "2.3": {
+      "task_fingerprint": "sha256:380101b3c900066677cda611423b5176e3565ea56358ec598579ded279724960",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const p=require('./src/parser'); const r=p.parseRequirements('.walden/specs/port-fallback/requirements.md'); if(!r.stats||!r.stats.total||!r.stats.byType||!r.stats.byGroup) process.exit(1); console.log('stats ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:d76b228a0fc10fe5e96e90871912af89f857f534bc62ce116c61a1a7f8119b3d"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "3.1": {
+      "task_fingerprint": "sha256:a2660c4121e5d48fbeb539b66603fc0548064f0eb90b3a42985ed0954c23d2c7",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "process.env.PORT='43110'; const http=require('http'); const s=require('./server'); s.once('listening',()=\u003e{const port=s.address().port; http.get('http://127.0.0.1:'+port+'/api/projects',r=\u003e{let d='';r.on('data',c=\u003ed+=c);r.on('end',()=\u003e{const j=JSON.parse(d); if(!j.projects.includes('port-fallback')) process.exit(1); console.log('projects ok'); s.close();});});}); setTimeout(()=\u003eprocess.exit(1),5000).unref();"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:9732c2d283fe283ae295f97dcd123d12db95c462798be0c5c7b2686eed50e839"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "3.2": {
+      "task_fingerprint": "sha256:0af723864866d778c876d6cfaf04cb76bd0d32ff3fbf9cce72ac9fae5ec6e3f8",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "process.env.PORT='43120'; const http=require('http'); const s=require('./server'); s.once('listening',()=\u003e{const port=s.address().port; http.get('http://127.0.0.1:'+port+'/api/projects/nonexistent/requirements',r=\u003e{if(r.statusCode!==404) process.exit(1); console.log('404 ok'); s.close();});}); setTimeout(()=\u003eprocess.exit(1),5000).unref();"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:a8e275e2c0f4e9b4d99e219198d7b7a6e02c1ae8213132bf2e163a053bbb8484"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "3.3": {
+      "task_fingerprint": "sha256:4f54c8b0e7737fafd459a4203a35e97d34923984d1738d64567f4b6f7b7dab18",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const fs=require('fs'); const server=fs.readFileSync('server.js','utf8'); const p=require('./package.json'); if(!server.includes('express.static')) process.exit(1); if(!p.scripts||!p.scripts.start) process.exit(1); console.log('static+start ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:a995f2ec961f8b0a201f28a4439e473991bc05acd267b2bffc50678551246f3e"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "4.1": {
+      "task_fingerprint": "sha256:92bd48a235931618f0082c42447fe5b8613b91c3b4e278c608ae34e626e9ff95",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/index.html','utf8'); ['project-select','accordion','stats'].forEach(id=\u003e{ if(!s.includes('id=\"'+id+'\"')) process.exit(1); }); console.log('html ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:f3a2338bffd8bc7138231b5c2b85b7c54498862d502342fe0a7d511c86763507"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:16Z"
+    },
+    "4.2": {
+      "task_fingerprint": "sha256:31dc22a0d45f5a3dc14fdef86de574bb41a17c933b98994e1e95205279a14ba1",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/style.css','utf8'); ['--color-event','.card--event','.modal'].forEach(x=\u003e{ if(!s.includes(x)) process.exit(1); }); console.log('css ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:b66961c9244e6c0cfba611913c5b20f3173b1a5d577e649b827ba339aa9f6a6a"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:17Z"
+    },
+    "5.1": {
+      "task_fingerprint": "sha256:ee3060a1661b0a80f59553b48c2f776880e50e31cd4c26114f7723f77547d750",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/app.js','utf8'); ['DOMContentLoaded','/api/projects'].forEach(x=\u003e{ if(!s.includes(x)) process.exit(1); }); console.log('init ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:e74b455abb0961da6e637d1064304e695f4438baa9e2f2a30254696557f41e43"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:17Z"
+    },
+    "5.2": {
+      "task_fingerprint": "sha256:417df1a9926d5a5f78772618fa0ccddba70c7357c6a634632e1e32d56cee1b79",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/app.js','utf8'); ['renderAccordion','userStory'].forEach(x=\u003e{ if(!s.includes(x)) process.exit(1); }); console.log('accordion ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:1fdfa2298dc39432494410c09da6821e82fd27a33d9cff5edd3b637b1bf75d0e"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:17Z"
+    },
+    "5.3": {
+      "task_fingerprint": "sha256:81d7961a45fbca230813c3bba723073acfa6f067208fdc08b928d2ca2ce486da",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/app.js','utf8'); ['renderCard','card--'].forEach(x=\u003e{ if(!s.includes(x)) process.exit(1); }); console.log('card ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:7471d8dbc172d21f7875f766b04c8538f407cf87cf55cd882c7c692db073d143"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:17Z"
+    },
+    "5.4": {
+      "task_fingerprint": "sha256:5837496638fb176f333dfe86162583812670b822b097f0b1ed69059f5c63f874",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/app.js','utf8'); ['openModal','Escape'].forEach(x=\u003e{ if(!s.includes(x)) process.exit(1); }); console.log('modal ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:028924ab28b89cb086a2570d74a293bfb0f75c9695a0f8cb5ceefff6612ae88a"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:17Z"
+    },
+    "5.5": {
+      "task_fingerprint": "sha256:6d146d8f5d8b1704d4ea549d9ec4b6259acf694665fcbb1cbf305112115bcacd",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/app.js','utf8'); ['renderStats','byType'].forEach(x=\u003e{ if(!s.includes(x)) process.exit(1); }); console.log('stats ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:d76b228a0fc10fe5e96e90871912af89f857f534bc62ce116c61a1a7f8119b3d"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:17Z"
+    },
+    "6.1": {
+      "task_fingerprint": "sha256:db4a1e25cc787f41cc04dd302e65298da8f3c98f9f699d38570cac4fa12ea788",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "complete",
+        "policy": "completion-post-state/v1",
+        "assertion_result": "passed",
+        "integrity": "post-state",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:0bdac115f4bf4fa300e09f7094ee8004c9e49203e636c9010d1a578b33563b82",
+      "design_fingerprint": "sha256:2cdb1e8fa090894e6b088d412c7cba4a37b3b76c4153cb44eb35b089f2b7fa0b",
+      "tasks_fingerprint": "sha256:66ba8dd332d28261f0509ec06ad6a45167c3d7afd0512858bff8c0486d320d39",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "process.env.PORT='43130'; const http=require('http'); const s=require('./server'); s.once('listening',()=\u003e{const port=s.address().port; http.get('http://127.0.0.1:'+port+'/api/projects/port-fallback/requirements',r=\u003e{let d='';r.on('data',c=\u003ed+=c);r.on('end',()=\u003e{const j=JSON.parse(d); if(!j.groups||j.groups.length\u003c1){console.error('groups',j.groups\u0026\u0026j.groups.length);process.exit(1);} const types=new Set(j.groups.flatMap(g=\u003eg.criteria.map(c=\u003ec.type))); if(!types.has('event-driven')||!types.has('unwanted')){console.error('types',[...types]);process.exit(1);} console.log('smoke ok groups='+j.groups.length); s.close();});});}); setTimeout(()=\u003eprocess.exit(1),5000).unref();"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:9eeb6049a8abd49067a7d9e619973703d41fffd9bbb0499f9eadf53c233c94d3"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:14:17Z"
+    }
+  }
+}

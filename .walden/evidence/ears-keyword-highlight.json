@@ -1,0 +1,177 @@
+{
+  "schema_version": "v1alpha2",
+  "feature": "ears-keyword-highlight",
+  "tasks": {
+    "1.1": {
+      "task_fingerprint": "sha256:d66699c788bc2b4f11829d56f55c7622a57e54c5f46bbeac1e1a68b80c60be0f",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:40ea2ad7002b177b88e049b759be144c93043e699d8e8d61ce213910753a90a1",
+      "design_fingerprint": "sha256:d04dbace1c7de03085e771ae0d91ddd023fbc07d5cb29975554fa07198e9bc04",
+      "tasks_fingerprint": "sha256:2fb768eb79831760b4611781d6e7a4be65ed70586e52dbd341244f85b008306e",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/app.js','utf8'); if(!s.includes('escapeHtml')||!s.includes('EARS_KW_RE')) throw new Error('missing'); console.log('ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:11:09Z"
+    },
+    "1.2": {
+      "task_fingerprint": "sha256:76daaafeb80d7b754765448e1120df92964e881050542385445c81aa948e512e",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:40ea2ad7002b177b88e049b759be144c93043e699d8e8d61ce213910753a90a1",
+      "design_fingerprint": "sha256:d04dbace1c7de03085e771ae0d91ddd023fbc07d5cb29975554fa07198e9bc04",
+      "tasks_fingerprint": "sha256:2fb768eb79831760b4611781d6e7a4be65ed70586e52dbd341244f85b008306e",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "node",
+            "-e",
+            "const s=require('fs').readFileSync('public/app.js','utf8'); if(!s.includes('highlightEARS')) throw new Error('missing'); console.log('ok')"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:dc51b8c96c2d745df3bd5590d990230a482fd247123599548e0632fdbf97fc22"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:11:09Z"
+    },
+    "2.1": {
+      "task_fingerprint": "sha256:debcc22f867009e03284e747adb925d47b4d31e015acbb3eeadca99c98496b67",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:40ea2ad7002b177b88e049b759be144c93043e699d8e8d61ce213910753a90a1",
+      "design_fingerprint": "sha256:d04dbace1c7de03085e771ae0d91ddd023fbc07d5cb29975554fa07198e9bc04",
+      "tasks_fingerprint": "sha256:2fb768eb79831760b4611781d6e7a4be65ed70586e52dbd341244f85b008306e",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "grep",
+            "-q",
+            "highlightEARS(ac.text)",
+            "public/app.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:11:09Z"
+    },
+    "2.2": {
+      "task_fingerprint": "sha256:d790591ab1e366fb2fe4171701c56fc35ca6d763d73e03589906c2965e6c7f23",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:40ea2ad7002b177b88e049b759be144c93043e699d8e8d61ce213910753a90a1",
+      "design_fingerprint": "sha256:d04dbace1c7de03085e771ae0d91ddd023fbc07d5cb29975554fa07198e9bc04",
+      "tasks_fingerprint": "sha256:2fb768eb79831760b4611781d6e7a4be65ed70586e52dbd341244f85b008306e",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "sh",
+            "-c",
+            "grep -q 'innerHTML.*highlightEARS' public/app.js"
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:11:09Z"
+    },
+    "3.1": {
+      "task_fingerprint": "sha256:a8d7af4695f49d521d329e9e0149282854f9193ad8b28300d0d54472b1bbaaab",
+      "task_fingerprint_scheme": "walden/task-definition/v2",
+      "execution": {
+        "origin": "verify",
+        "policy": "verify-purity/v1",
+        "assertion_result": "passed",
+        "integrity": "pure",
+        "before_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+        "after_code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0"
+      },
+      "requirements_fingerprint": "sha256:40ea2ad7002b177b88e049b759be144c93043e699d8e8d61ce213910753a90a1",
+      "design_fingerprint": "sha256:d04dbace1c7de03085e771ae0d91ddd023fbc07d5cb29975554fa07198e9bc04",
+      "tasks_fingerprint": "sha256:2fb768eb79831760b4611781d6e7a4be65ed70586e52dbd341244f85b008306e",
+      "code_identity": "sha256:d17b1304e810bb5dc21c97a58e3eb29647f0c8a6c66ddfec6e6288575a044fe0",
+      "profile": {
+        "platform": "linux/amd64",
+        "walden": "v0.14.3"
+      },
+      "steps": [
+        {
+          "command": [
+            "sh",
+            "-c",
+            "node -e \"\nconst src = require('fs').readFileSync('public/app.js','utf8');\neval(src.match(/function escapeHtml[\\s\\S]*?^\\}/m)?.[0] + src.match(/const EARS_KW_RE[\\s\\S]*?;/m)?.[0] + src.match(/function highlightEARS[\\s\\S]*?^\\}/m)?.[0]);\nassert = (a,b) =\u003e { if(a!==b) throw new Error('FAIL: '+JSON.stringify(a)+' != '+JSON.stringify(b)); };\nassert(highlightEARS('WHEN x'), '\u003cstrong\u003eWHEN\u003c/strong\u003e x');\nassert(highlightEARS('\u003cscript\u003e'), '\u0026lt;script\u0026gt;');\nconst r1 = highlightEARS('IF x THEN the system SHALL y');\nif(!r1.includes('\u003cstrong\u003eIF\u003c/strong\u003e')) throw new Error('IF not bold');\nif(!r1.includes('\u003cstrong\u003eTHEN\u003c/strong\u003e')) throw new Error('THEN not bold');\nif(!r1.includes('\u003cstrong\u003ethe system SHALL\u003c/strong\u003e')) throw new Error('the system SHALL (lowercase) not bold');\nconst r2 = highlightEARS('The system SHALL garantire l invariante');\nif(!r2.includes('\u003cstrong\u003eThe system SHALL\u003c/strong\u003e')) throw new Error('The system SHALL (capital T) not bold - issue#1');\nconsole.log('ALL PASS');\n\""
+          ],
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "output_digest": "sha256:8a3279e783a1623353792c9ae9ed02ad87b41c4c4f1dcf094ae8632c8fea2ad6"
+        }
+      ],
+      "result": "passed",
+      "verified_at": "2026-11-06T16:11:09Z"
+    }
+  }
+}

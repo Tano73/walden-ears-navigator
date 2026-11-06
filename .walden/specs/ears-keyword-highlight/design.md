@@ -1,8 +1,11 @@
 ---
+walden_schema_version: v1alpha1
 status: approved
 approved_at: 2026-04-27T20:10:18Z
 last_modified: 2026-04-27T20:10:18Z
+approved_fingerprint: sha256:d04dbace1c7de03085e771ae0d91ddd023fbc07d5cb29975554fa07198e9bc04
 source_requirements_approved_at: 2026-04-27T19:30:07Z
+source_requirements_fingerprint: sha256:40ea2ad7002b177b88e049b759be144c93043e699d8e8d61ce213910753a90a1
 ---
 
 # Feature Design — ears-keyword-highlight

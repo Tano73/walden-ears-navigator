@@ -1,7 +1,9 @@
 ---
+walden_schema_version: v1alpha1
 status: approved
 approved_at: 2026-04-30T14:15:52Z
 last_modified: 2026-04-30T14:15:52Z
+approved_fingerprint: sha256:904819b7405048f2ac2c3fed29c335f39568caae95b8888cfcc9884ca2e89ef4
 ---
 
 # Requirements Document

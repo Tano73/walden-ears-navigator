@@ -1,8 +1,11 @@
 ---
+walden_schema_version: v1alpha1
 status: approved
 approved_at: 2026-04-30T14:17:32Z
 last_modified: 2026-04-30T14:17:32Z
+approved_fingerprint: sha256:43163050f65119dcdfe818b8fb354742fa21467e006f7fca363e069a275b1ddc
 source_requirements_approved_at: 2026-04-30T14:15:52Z
+source_requirements_fingerprint: sha256:904819b7405048f2ac2c3fed29c335f39568caae95b8888cfcc9884ca2e89ef4
 ---
 
 # Feature Design

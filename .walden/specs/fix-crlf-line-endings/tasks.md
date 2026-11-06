@@ -1,8 +1,11 @@
 ---
+walden_schema_version: v1alpha1
 status: approved
 approved_at: 2026-04-30T14:18:34Z
 last_modified: 2026-04-30T14:19:47Z
+approved_fingerprint: sha256:6d5bcb97f3b03e4c8c424a400186b9920b5dc190ec7002035e814f9e7b819cd4
 source_design_approved_at: 2026-04-30T14:17:32Z
+source_design_fingerprint: sha256:43163050f65119dcdfe818b8fb354742fa21467e006f7fca363e069a275b1ddc
 ---
 
 # Implementation Plan
